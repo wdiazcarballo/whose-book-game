@@ -18,7 +18,7 @@ import {
   Book14,
   Book15,
   Book16
-} from '../../../booksc';
+} from '../books';
 
 // Create book data with metadata
 const bookData = [

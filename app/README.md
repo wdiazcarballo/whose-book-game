@@ -26,6 +26,7 @@ An interactive React application that showcases student-created book presentatio
 ```
 app/
 ├── public/              # Public assets
+│   └── images/          # Book cover images
 ├── src/
 │   ├── components/      # Reusable components
 │   │   ├── FlipCard.jsx # Interactive flip card component
@@ -40,6 +41,7 @@ app/
 │   │   ├── BookDetails.jsx # Individual book view
 │   │   ├── GamePage.jsx # Guessing game
 │   │   └── NotFound.jsx # 404 page
+│   ├── books/           # Book components using styled-components
 │   ├── App.jsx          # Main app component with routes
 │   └── index.js         # Entry point
 └── README.md            # Project documentation
@@ -47,33 +49,120 @@ app/
 
 ## Getting Started
 
-1. **Clone the Repository**
-   ```
-   git clone https://github.com/yourusername/whose-book-game.git
-   cd whose-book-game
-   ```
+### Option 1: Using the provided setup (Recommended)
 
-2. **Install Dependencies**
-   ```
+1. **Install dependencies**
+   ```bash
+   cd app
    npm install
    ```
 
-3. **Run the Development Server**
+2. **Create books directory in src**
+   ```bash
+   mkdir -p src/books
    ```
+
+3. **Copy book components**
+   ```bash
+   # From the repository root:
+   cp -r booksc/* app/src/books/
+   ```
+
+4. **Update book component imports**
+   - Open `src/context/BookContext.jsx`
+   - Change the import path from `../../../booksc` to `../books`
+
+5. **Start the development server**
+   ```bash
    npm start
    ```
 
-4. **Build for Production**
-   ```
-   npm run build
+### Option 2: Starting from scratch with create-react-app
+
+1. **Create a new React app**
+   ```bash
+   npx create-react-app whose-book-is-this
+   cd whose-book-is-this
    ```
 
-## Technologies Used
+2. **Install required dependencies**
+   ```bash
+   npm install react-router-dom styled-components
+   ```
 
-- **React**: Frontend library
-- **React Router**: Navigation
-- **Styled Components**: CSS-in-JS styling
-- **Context API**: State management
+3. **Copy source files**
+   - Copy all files from `app/src` to your new project's `src` directory
+   - Copy book components from `booksc` to `src/books`
+   - Copy public assets from `app/public` to your new project's `public` directory
+
+4. **Update import paths**
+   - Make sure all import paths are correctly pointing to the new locations
+
+5. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+## Troubleshooting
+
+If you encounter errors during setup or running:
+
+1. **Missing dependencies**
+   ```bash
+   # Common dependencies that may need to be installed:
+   npm install react-router-dom styled-components
+   ```
+
+2. **Image loading issues**
+   - Make sure to create the directory structure:
+   ```bash
+   mkdir -p public/images/covers
+   ```
+   - Add book cover images to this directory if referenced in the components
+
+3. **Path issues**
+   - The most common issue is incorrect import paths. Make sure to check:
+   ```jsx
+   // In src/context/BookContext.jsx
+   // Change this:
+   import { Book1, Book2, ... } from '../../../booksc';
+   
+   // To this:
+   import { Book1, Book2, ... } from '../books';
+   ```
+
+4. **Component render issues**
+   - If you see errors about undefined components, check if all the imports are correct
+   - Ensure all book components are properly exported from their respective files
+
+## Running in Development Mode
+
+```bash
+npm start
+```
+
+This will start the development server and open the application in your default browser at [http://localhost:3000](http://localhost:3000).
+
+## Building for Production
+
+```bash
+npm run build
+```
+
+This will create a production-ready build in the `build` directory. You can serve it with any static server:
+
+```bash
+npx serve -s build
+```
+
+## Project Organization
+
+This repository contains several key directories:
+
+- `/app` - The React application (you are here)
+- `/books` - React components with traditional CSS
+- `/booksc` - React components with styled-components (recommended for use)
+- `/bookhtml` - Original HTML versions of the student book presentations
 
 ## Game Rules
 
@@ -85,18 +174,9 @@ app/
    - 2 hints: 10 points
    - 3 hints: 5 points
 
-## Contributing
-
-This project was created as a showcase for student work. If you'd like to add more books or features, please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
