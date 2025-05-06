@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Book Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<header>
+<img src="https://ff.lnwfile.com/_webp_max_images/600/600/cc/fa/bf.webp" alt="Book Cover" class="cover-image">
+<div class="image-wrapper ">
+  <h2>สุดยอดคัมภีร์</h2>
+  <h1>การเงิน</h1>
+  <h3>จาก</h3>
+  <h1>ฮาร์วาร์ด</h1>
+  <h3>=====ฉบับปรับปรุง=====</h3>
+  <h2>สุดยอดคัมภัร์การเงิน</h2>
+  <h4>สำหรับผู้จัดการ ผู้บริหาร</h4>
+  <h4>เเละนักลงทุนหุ้นพื้นฐานทุกคน</h4>
+</div>
+<span class = "gold-title">FINANCIAL INTELLIGENCE</span>
+<p class="highlight-text">KAREN BERMAN, JOEKNIGHT เเละ JOHN CASE</p>
+</header>
+
+
+
+  <main>
+<section class="about-book">
+<h3>About the Book</h3>
+  <button onclick="toggleTOC()">My contend</button>
+<p>ความเข้าใจในเรื่องตัวเลขทางการเงิน ความสำคัญ</p>
+  <p>เเละความหมายที่ซ่อนอยู่เบื้องหลังตัวเลขต่างๆ </p>
+<p>ที่ผู้จัดการเเละนักลงทุนทุกคนจำเป็นต้องรู้</p>
+</section>
+    <section class="toc">
+<h3>Table of Contents</h3>
+<ul class="">
+  <li>Chapter 1 : ศิลปะทางการเงิน (ทำไมถึงสำคัญ?)</li>
+  <li>Chapter 2 : คุณสมบัติเฉพาะตัว (หลายๆอย่าง) ของงบกำไรขาดทุน</li>
+  <li>Chapter 3 : งบดุลบอกเรื่องราวต่างๆได้มากที่สุด</li>
+  <li>Chapter 4 : เงินสดคือพระราชา</li>
+  <li>Chapter 5 : อัตราการเรียนรู้ว่าจริงๆเเล้ว ตัวเลขต่างๆ บอกอะไรเเก่คุณได้บ้าง</li>
+  <li>Chapter 6 : คำนวณ เเละ ทำความเข้าใจอย่างเเท้จริง ในเรื่องผลตอบเเทนต่อการลงทุน</li>
+  <li>Chapter 7 : การใช้ความฉลาดรู้ทางการเงินที่สำคัญ การบริหารเงินทุนหมุนเวียน</li>
+  <li>Chapter 8 : การทำให้ทั้งองค์กรมีความฉลาดด้านการเงิน</li>
+</ul>
+
+</section>
+</main>
+<style>
+  footer {
+    display: flex ;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
+
+  .yellow {
+    font-size: 16px;
+    margin: 5px;
+    color:#080800;
+  }
+
+  ul {
+    list-style-type: none; 
+    padding-left: 20px; 
+    text-align: left; 
+  }
+
+  li {
+    font-family: 'Sarabun', sans-serif; 
+      font-size: 15px; 
+      line-height: 1.6; 
+      margin-bottom: 10px; 
+      padding: 10px; 
+      transition: all 0.3s ease; 
+    }
+  
+    li:hover {
+      transform: translateX(10px); 
+      background-color: #f0f0f0; 
+      color: #333; 
+    }
+
+    li:active {
+      transform: translateX(5px); 
+      background-color: #d0d0d0; 
+      color: #cc99ff; 
+    }
+
+</style>
+  <footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/1200px-Harvard_University_coat_of_arms.svg.png" alt="logo" class = "logo">
+    <span class = "yellow">Havard University</span>
+</footer>
+
+
+
+<SCript>
+    function toggleTOC() {
+  const toc = document.querySelector('.toc');
+  toc.style.display = (toc.style.display === 'none') ? 'block' : 'none';
+}
+</SCript>
+
+
+</body>
+</html>

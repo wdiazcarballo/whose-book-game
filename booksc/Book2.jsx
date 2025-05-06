@@ -1,0 +1,178 @@
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+// Styled Components
+const Container = styled.div`
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2c2f36;
+  color: #f5f5f5;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+`;
+
+const Header = styled.header`
+  text-align: center;
+  margin-bottom: 30px;
+`;
+
+const CoverImage = styled.img`
+  max-width: 220px;
+  display: block;
+  margin: 20px auto;
+  border: 4px solid #ff6600;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
+`;
+
+const Title = styled.h1`
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 5px;
+`;
+
+const Subtitle = styled.h2`
+  font-size: 1.4em;
+  color: #ff8533;
+  margin-bottom: 10px;
+`;
+
+const Author = styled.p`
+  font-style: italic;
+  color: #cccccc;
+`;
+
+const Main = styled.main``;
+
+const ContentBox = styled.section`
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #3b3e47;
+  padding: 20px;
+  border-left: 5px solid #ff6600;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.1);
+`;
+
+const TOCBox = styled(ContentBox)`
+  display: ${props => props.show ? 'block' : 'none'};
+`;
+
+const Heading3 = styled.h3`
+  color: #ff8533;
+`;
+
+const Heading4 = styled.h4`
+  color: #ffa94d;
+  font-weight: bold;
+  white-space: pre-line;
+`;
+
+const ActionButton = styled.button`
+  background-color: #ff6600;
+  color: #1e1e1e;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #ffa94d;
+  }
+`;
+
+const List = styled.ul`
+  list-style-type: none;
+  padding-left: 15px;
+`;
+
+const ListItem = styled.li`
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+  transition: transform 0.2s ease;
+
+  &:before {
+    content: "•";
+    color: #ff6600;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    transform: translateX(5px);
+  }
+`;
+
+const Footer = styled.footer`
+  text-align: center;
+  margin-top: 40px;
+  color: #bbbbbb;
+  font-size: 0.9em;
+  padding: 10px;
+  border-top: 1px solid #444;
+`;
+
+const Book2 = () => {
+  const [showTOC, setShowTOC] = useState(false);
+
+  const toggleTOC = () => {
+    setShowTOC(!showTOC);
+  };
+
+  return (
+    <Container>
+      <Header>
+        <CoverImage src="/images/book2-cover.jpg" alt="Book Cover" />
+        <Title>Do Hard Things</Title>
+        <Subtitle>วิทยาศาสตร์ของการไม่ยอมแพ้</Subtitle>
+        <Author>by Steve Magness</Author>    
+      </Header>
+
+      <Main>
+        <ContentBox>
+          <Heading3>About the Book</Heading3>
+          <p>
+            อะไรทำให้คนคนหนึ่ง<br />
+            ยอมแพ้ง่ายกว่าอีกคน?<br />
+            ในยามที่ใกล้จะถอดใจ<br />
+            อะไรคือปัจจัยที่ทำให้เรากลับมาฮึดสู้?<br />
+          </p>
+          <Heading4>
+            คำตอบอาจไม่ใช่อย่างที่คุณคิด
+          </Heading4>
+          <p>
+            Steve magness นักวิทยาศาสตร์การกีฬาและโค้ชโอลิมปิก<br />
+            จะพาคุณออกไปสำรวจสนามแข่งโอลิมปิก เวทีผู้นำระดับโลก<br />
+            สมรภูมิรบ ห้องประชุมผู้บริหาร ตลอดจนกลางทะเลลุก<br />
+            เพื่อค้นหาความลับที่อยู่เบื้องหลัง "จิตใจที่แข็งแกร่ง"<br />
+            และมอบแนวทางที่จะช่วยให้คุณสร้างมันขึ้นมา<br /><br />
+          </p>
+          <ActionButton onClick={toggleTOC}>Toggle Table of Contents</ActionButton>
+        </ContentBox>
+
+        <TOCBox show={showTOC}>
+          <Heading3>Table of Contents</Heading3>
+          <List>
+            <ListItem>Chapter 1: จากโค้ชสายโหด ผู้ปกครองจองเฮี้ยมและคนแข็งแกร่งสู่การค้นหาความเข้มแข็งภายในที่แท้จริง</ListItem>
+            <ListItem>Chapter 2: จมน้ำหรือว่ายน้ำ เรารับเอาบทเรียนจากกองทัพมาใช้แบบผิดเพี้ยนได้อย่างไร</ListItem>
+            <ListItem>Chapter 3: ยอมรับความสามารถของตนเอง</ListItem>
+          </List>      
+        </TOCBox>
+      </Main>
+
+      <Footer>
+        <p>Project by [Student Name] for DTI101</p>
+      </Footer>
+    </Container>
+  );
+};
+
+export default Book2;

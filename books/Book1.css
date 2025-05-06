@@ -1,0 +1,152 @@
+.book1-container {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Sarabun', sans-serif;
+  color: #2f4f4f;
+  background: linear-gradient(-45deg, #d0f0c0, #a8e6cf, #dcedc1, #b2f7ef);
+  background-size: 400% 400%;
+  animation: natureBG 20s ease infinite;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@keyframes natureBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.book1-container main {
+  background-color: rgba(66, 35, 35, 0.85);
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2);
+  width: 80%;
+}
+
+.book1-container section {
+  margin-bottom: 30px;
+  border: 1px solid #d5a5a2;
+  border-radius: 16px;
+  padding: 20px;
+  background-color: #f8fff5;
+}
+
+.book1-container h3 {
+  color: #490808;
+}
+
+.book1-container button {
+  padding: 10px 20px;
+  background-color: #bb6d66;
+  color: rgb(65, 51, 51);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book1-container button:hover {
+  background-color: #388e3c;
+}
+
+.book1-container ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.book1-container li {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.book1-container li:hover {
+  background-color: #e0f2f1;
+  color: #9fc5a1;
+}
+
+.book1-container .image-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}   
+
+.book1-container .cover-image {
+  max-width: 200px;
+  border: 3px solid #000;
+  display: inline-block;
+}
+   
+.book1-container header, 
+.book1-container main, 
+.book1-container footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+   
+.book1-container .about-book {
+  padding: 20px;
+  background-color: #e1e3da;
+  border: 10px solid #370d0d;
+  margin-bottom: 30px; 
+  border-radius: 100px;
+}
+
+.book1-container .toc {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 10px solid #490202;
+  border-radius: 100px;
+}
+  
+.book1-container .highlight-text {
+  color: rgb(77, 37, 37);
+}
+  
+.book1-container .gold-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #d4af37;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #f9d976, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+  
+.book1-container .gold-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+
+.book1-container .logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.book1-container .yellow {
+  font-size: 16px;
+  margin: 5px;
+  color: #080800;
+}
+
+@media (max-width: 768px) {
+  .book1-container header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book1-container .cover-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

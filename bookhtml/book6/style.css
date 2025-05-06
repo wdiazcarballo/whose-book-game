@@ -1,0 +1,83 @@
+/* รีเซ็ตเบื้องต้น */
+body {
+    margin: 0;
+    /* font-family: 'Segoe UI', sans-serif; */
+    font-family: Comic Sans MS;
+    background-color: #cbd8f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #f9c74f;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header h2 {
+    margin-top: 0.5rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  
+  .cover {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .cover img {
+    width: 250px;
+    border: 4px solid #f9844a;
+    border-radius: 8px;
+  }
+  
+  .summary {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #90be6d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  #blurb {
+    margin-top: 1rem;
+    font-style: italic;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .toc {
+    padding: 0 2rem;
+  }
+  
+  .toc h3 {
+    color: #0088ff;
+  }
+  
+  .toc ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+  }
+  
+  footer {
+    background-color: #130a39;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+  }
+  

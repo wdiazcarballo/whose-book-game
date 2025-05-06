@@ -1,0 +1,40 @@
+html{
+  background-colour:#c85a42;
+}
+body {
+  font-family: 'Noto Sans Thai', sans-serif;
+  background-color: #c85a42;
+  color: #fff;
+  margin: 20px;
+}
+ 
+.cover-image {
+  max-width: 200px;
+  display: block;
+  margin: auto;
+  border: 3px solid #000;
+}
+ 
+header, main, footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+ 
+.about-book, .toc {
+  color:#333;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+.title {
+    display: flex;
+    flex-direction:row; /* หรือ column */
+    justify-content: center; /* จัดแนวนอน */
+    align-items: center;     /* จัดแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่างลูก */
+  }
+.text-title{
+font-size: 70px;
+}

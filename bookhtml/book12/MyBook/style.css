@@ -1,0 +1,114 @@
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header, main, footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cover-image {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.author {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #52bed1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #51dfb0;
+}
+
+.about-book {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  display: inline-block; /* ให้ขนาดพอดีข้อความ */
+  border: 2px solid #000; /* ขอบดำ */
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #f67f67; /* พื้นหลังอ่อนๆ จะได้ดูนุ่ม */
+  margin-bottom: 20px; /* เว้นห่างข้อความข้างล่าง */
+}
+
+.toc {
+  max-width: 700px;
+  margin: 40px auto 20px auto; /* เพิ่มระยะห่างบน 40px แยกชัด */
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.toc {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.toc h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.toc ul {
+  padding-left: 20px;
+  list-style: disc inside;
+}
+
+.toc li {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+

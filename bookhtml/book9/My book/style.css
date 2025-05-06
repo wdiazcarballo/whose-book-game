@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap');
+ 
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(-45deg, #0d0221, #1e0036, #000020, #0d0221);
+  background-size: 400% 400%;
+  color: #e0e0e0;
+  margin: 20px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+}
+ 
+header, main, footer {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+@keyframes spin3D {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+ 
+  .infinity_sign {
+    animation: spin3D 10s linear infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+.cover-image, .infinity_sign {
+  max-width: 220px;
+  display: block;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+.cover-image:hover {
+  transform: scale(1.05);
+}
+ 
+.about-book, .toc {
+  max-width: 640px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+ 
+.about-book:hover, .toc:hover {
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+}
+ 
+.toc {
+  text-align: left;
+  display: block;
+  width: 100%;
+  color: #a7c7f9;
+  border-left: 6px solid #5a9bcf;
+}
+ 
+.toc ul {
+  padding-left: 25px;
+}
+.toc li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  position: relative;
+  padding-left: 15px;
+}
+.toc li::after {
+  position: absolute;
+  color: #aed5f6;
+  font-weight: bold;
+}
+h1, h2, .author{
+    text-shadow:
+      0 0 10px #8ab4f8,
+      0 0 20px #5a9bcf,
+      0 0 30px #7b68ee;
+  }
+h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8em;
+  color: #cfd8ff;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4f66ff;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+ 
+  button.bouncy {
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+ 
+button {
+  background: linear-gradient(135deg, #5a9bcf, #1f4e79);
+  color: #fff;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+button:hover {
+  background: linear-gradient(135deg, #1f4e79, #5a9bcf);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
+}
+button:active {
+  transform: translateY(2px);
+}
+button:focus {
+  outline: none;
+  border: 2px solid #1f4e79;
+}

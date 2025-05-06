@@ -1,0 +1,370 @@
+/* Book8 Styles */
+/* ตั้งค่าพื้นฐาน */
+.book8-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.book8-container {
+  font-family: 'Sarabun', sans-serif;
+  background-color: #0e0e0e;
+  color: #5c5c5c;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =================== ส่วนหน้าปกหนังสือ =================== */
+.book8-cover {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* โลโก้มหาวิทยาลัย */
+.book8-university-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.book8-university-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffa500;
+}
+
+.book8-university-logo p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* ชื่อหนังสือ */
+.book8-book-title {
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.book8-book-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ccff00;
+  line-height: 1.1;
+  text-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.book8-book-title h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* ชื่อผู้เขียน */
+.book8-book-author {
+  text-align: right;
+  font-size: 1.5rem;
+  z-index: 10;
+  margin-bottom: 2rem;
+}
+
+/* เอฟเฟกต์แสงและเส้น */
+.book8-light-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.book8-light-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0.6;
+}
+
+.book8-orb1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 20%;
+  background: radial-gradient(circle, rgba(255,165,0,0.8) 0%, rgba(255,165,0,0) 70%);
+}
+
+.book8-orb2 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  right: 15%;
+  background: radial-gradient(circle, rgba(0,191,255,0.5) 0%, rgba(0,191,255,0) 70%);
+}
+
+.book8-orb3 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 40%;
+  background: radial-gradient(circle, rgba(255,0,255,0.4) 0%, rgba(255,0,255,0) 70%);
+}
+
+.book8-orb4 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 30%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
+}
+
+.book8-orb5 {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  right: 40%;
+  background: radial-gradient(circle, rgba(255,255,0,0.6) 0%, rgba(255,255,0,0) 70%);
+}
+
+.book8-light-beam {
+  position: absolute;
+  background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  transform: rotate(45deg);
+}
+
+.book8-beam1 {
+  width: 200%;
+  height: 3px;
+  top: 40%;
+  left: -50%;
+}
+
+.book8-beam2 {
+  width: 200%;
+  height: 2px;
+  top: 70%;
+  left: -50%;
+  transform: rotate(-30deg);
+}
+
+/* เส้นตาราง */
+.book8-city-grid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 2;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg);
+}
+
+.book8-grid-line {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(22, 68, 22, 0.5);
+}
+
+.book8-grid-line:nth-child(1) { bottom: 20%; }
+.book8-grid-line:nth-child(2) { bottom: 40%; }
+.book8-grid-line:nth-child(3) { bottom: 60%; }
+.book8-grid-line:nth-child(4) { bottom: 80%; }
+.book8-grid-line:nth-child(5) { bottom: 100%; }
+
+/* =================== ส่วนเนื้อหาหนังสือ =================== */
+.book8-book-content {
+  padding: 2rem;
+}
+
+.book8-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.book8-header h1 {
+  font-size: 2rem;
+  color: #006633;
+  margin-bottom: 0.5rem;
+}
+
+.book8-header h2 {
+  font-size: 1.5rem;
+  color: #006633;
+  margin-bottom: 0.5rem;
+}
+
+.book8-author {
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.book8-cover-image {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ส่วนเกี่ยวกับหนังสือ */
+.book8-about-book {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.book8-section-heading {
+  color: #006633;
+  border-bottom: 2px solid #665c00;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* ปุ่ม */
+.book8-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.book8-btn {
+  background-color: #002c66;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.book8-btn:hover {
+  background-color: #454d00;
+}
+
+.book8-btn.book8-active {
+  background-color: #085f75;
+  box-shadow: 0 0 0 2px rgba(0, 102, 51, 0.3);
+}
+
+/* ส่วนเนื้อหา */
+.book8-content-section {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* สารบัญ */
+.book8-toc-list {
+  list-style-type: none;
+}
+
+.book8-toc-list li {
+  margin-bottom: 0.8rem;
+}
+
+.book8-toc-list ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.book8-chapter-title {
+  font-weight: bold;
+  color: #006633;
+}
+
+/* เนื้อหาบท */
+.book8-chapter-content {
+  margin-top: 1.5rem;
+}
+
+.book8-chapter-content h4 {
+  color: #0fb863;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.book8-concept-box {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border-left: 3px solid #006633;
+}
+
+.book8-concept-title {
+  font-weight: bold;
+  color: #006633;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.book8-example {
+  background-color: #f0f7ff;
+  padding: 0.8rem;
+  margin-top: 0.8rem;
+  border-radius: 5px;
+  border-left: 3px solid #4d94ff;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.book8-footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .book8-book-title h1 {
+    font-size: 3rem;
+  }
+  
+  .book8-book-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .book8-book-author {
+    font-size: 1.2rem;
+  }
+  
+  .book8-button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .book8-btn {
+    margin-bottom: 0.5rem;
+  }
+}

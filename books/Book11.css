@@ -1,0 +1,122 @@
+.book11-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.book11-container {
+  font-family: 'Kanit', sans-serif;
+  background-color: #fdf0f5;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.book11-book-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffe0ef;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.book11-book-cover img {
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.book11-book-info {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.book11-book-info h1 {
+  font-size: 2.2rem;
+  color: #c2185b;
+}
+
+.book11-book-info h2 {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.book11-author {
+  margin-bottom: 20px;
+  color: #6a1b9a;
+}
+
+.book11-button {
+  padding: 10px 20px;
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book11-button:hover {
+  background-color: #ad1457;
+}
+
+.book11-about-book, .book11-toc {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.book11-container h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f48fb1;
+  padding-bottom: 5px;
+}
+
+.book11-toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.book11-toc li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  transition: color 0.3s;
+}
+
+.book11-toc li:hover {
+  color: #c2185b;
+  cursor: pointer;
+}
+
+.book11-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #fce4ec;
+  border-radius: 10px;
+  margin-top: 30px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .book11-book-intro {
+    flex-direction: column;
+  }
+  
+  .book11-book-info {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+}

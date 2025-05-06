@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Book Web</title>
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="jquery.js"></script>
+  <script src="turn.js"></script>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop id="myVideo">
+      <source src="./videos.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="main-container">
+    <div class="resize-text">
+      <img src="./pngegg.png" alt="Harry Potter Logo" />
+    </div>
+
+    <div class="book-section">
+        <div class="book-cover">
+          <img class="resize-image1" src="./images.jpeg" alt="Harry Potter Front Cover" />
+          <div class="author">
+            <h3>Written By J.K. Rowling</h3>
+          </div>
+        </div>
+      
+        <div class="book-description">
+          <h3>Harry Potter And The Sorcerer's Stone</h3>
+          <small>แฮร์รี่ พอตเตอร์ เด็กชายกำพร้าที่เติบโตมาในตู้ใต้บันไดของบ้านลุงป้าผู้ใจร้าย วันหนึ่งกลับได้รับจดหมายปริศนา ที่พาเขาเข้าสู่โลกเวทมนตร์ที่เขาไม่เคยรู้ว่ามีอยู่จริง เขาได้ค้นพบว่าแท้จริงแล้วเขาเป็นพ่อมด และมีที่เรียนที่รอเขาอยู่—โรงเรียนฮอกวอตส์ โรงเรียนสอนเวทมนตร์คาถาและเวทวิทยา</small>
+          <small>ท่ามกลางปราสาทลึกลับ บันไดที่เคลื่อนไหวได้ และบทเรียนแปลกประหลาด แฮร์รี่พบทั้งมิตรภาพและศัตรู พร้อมกันนั้น เขาก็เริ่มไขปริศนาเกี่ยวกับหินวิเศษลึกลับ และเงามืดของพ่อมดผู้ชั่วร้ายที่เขาไม่เคยลืม… การผจญภัยที่เปลี่ยนชีวิตเริ่มต้นขึ้นที่นี่</small>
+        </div>
+      </div>
+      <button class="btn" onclick="showText()">Toggle Table Content</button>
+        <div class="table-content" id="displayText" style="display: none;">
+        <p>1. The Boy Who Lived</p>
+        <p>2. The Vanishing Glass</p>
+        <p>3. The Letters from No One</p>
+        <p>4. The Keeper of the Keys</p>
+        <p>5. Diagon Alley</p>
+        </div>
+        <div class="author2">
+            <small>Project by Premch Phaosatheanthanon DTI103</small>
+        </div>
+        <script>
+            function showText() {
+                document.getElementById("displayText").style.display = "block";
+            }
+        </script>
+    </div>
+</body>
+</html>

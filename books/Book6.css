@@ -1,0 +1,85 @@
+/* Book6 Styles */
+.book6-container {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #cbd8f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.book6-header {
+  background-color: #f9c74f;
+  padding: 2rem;
+  text-align: center;
+}
+
+.book6-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.book6-header h2 {
+  margin-top: 0.5rem;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.book6-cover {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.book6-cover img {
+  width: 250px;
+  border: 4px solid #f9844a;
+  border-radius: 8px;
+}
+
+.book6-summary {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.book6-summary button {
+  padding: 0.5rem 1rem;
+  background-color: #90be6d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.book6-summary #blurb {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.book6-hidden {
+  display: none;
+}
+
+.book6-visible {
+  display: block;
+}
+
+.book6-toc {
+  padding: 0 2rem;
+}
+
+.book6-toc h3 {
+  color: #0088ff;
+}
+
+.book6-toc ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+.book6-footer {
+  background-color: #130a39;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}

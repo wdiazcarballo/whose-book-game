@@ -1,0 +1,143 @@
+body {
+  font-family: 'Mitr', sans-serif;
+  background: #fdf6f0;
+  color: #3a2c1a;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 32px 8px 16px 8px;
+}
+
+.cover-image {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin: 6px 0 0 0;
+  font-weight: 700;
+  color: #f26b3a;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #e88b4a;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+.author {
+  font-size: 1em;
+  color: #a86c3a;
+  margin-bottom: 16px;
+}
+
+button {
+  background: #f26b3a;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #c94a14;
+  transform: translateY(-2px) scale(1.03);
+}
+
+main {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+section {
+  background: #fff;
+  border: 2px solid #f26b3a;
+  border-radius: 12px;
+  margin: 24px 0;
+  padding: 18px 22px;
+  box-shadow: 0 2px 12px rgba(242,107,58,0.04);
+}
+
+.about-book, .toc, .back-cover {
+  margin-bottom: 0;
+}
+
+.toc ul, .back-cover ul {
+  padding-left: 24px;
+  margin: 0;
+}
+
+.toc li, .back-cover li {
+  margin-bottom: 4px;
+  font-size: 1em;
+}
+
+.insight-section, .mood-section {
+  background: #fff7f2;
+  border: 2px dashed #f26b3a;
+  margin: 32px auto 0 auto;
+  max-width: 500px;
+  padding: 20px 10px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.insight-section button {
+  margin-top: 12px;
+}
+
+.mood-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #f7b267 0%, #f4845f 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 0;
+  font-size: 1.05em;
+  transition: background 0.2s, transform 0.13s;
+}
+
+.mood-btn:hover {
+  background: linear-gradient(90deg, #f26b3a 0%, #f4845f 100%);
+  transform: scale(1.04);
+}
+
+footer {
+  text-align: center;
+  color: #f26b3a;
+  margin: 36px 0 18px 0;
+  font-size: 0.98em;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 700px) {
+  main, .insight-section, .mood-section {
+    max-width: 98vw;
+    padding: 10px 3vw;
+  }
+  .cover-image {
+    width: 90px;
+  }
+}

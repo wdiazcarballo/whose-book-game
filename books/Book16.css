@@ -1,0 +1,150 @@
+.book16-container {
+  font-family: 'Mitr', 'Prompt', sans-serif;
+  background: #fdf6f0;
+  color: #3a2c1a;
+  margin: 0;
+  padding: 0;
+}
+
+.book16-header {
+  text-align: center;
+  padding: 32px 8px 16px 8px;
+}
+
+.book16-cover-image {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  margin-bottom: 12px;
+}
+
+.book16-container h1 {
+  font-size: 2.2em;
+  margin: 6px 0 0 0;
+  font-weight: 700;
+  color: #f26b3a;
+  letter-spacing: 1px;
+}
+
+.book16-container h2 {
+  font-size: 1.2em;
+  color: #e88b4a;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.book16-container h3 {
+  font-weight: 600;
+}
+
+.book16-author {
+  font-size: 1em;
+  color: #a86c3a;
+  margin-bottom: 16px;
+}
+
+.book16-button {
+  background: #f26b3a;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 10px;
+}
+
+.book16-button:hover {
+  background: #c94a14;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.book16-main {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.book16-about-book, .book16-toc, .book16-back-cover, 
+.book16-insight-section, .book16-mood-section {
+  background: #fff;
+  border: 2px solid #f26b3a;
+  border-radius: 12px;
+  margin: 24px 0;
+  padding: 18px 22px;
+  box-shadow: 0 2px 12px rgba(242,107,58,0.04);
+}
+
+.book16-about-book, .book16-toc, .book16-back-cover {
+  margin-bottom: 0;
+}
+
+.book16-toc ul, .book16-back-cover ul {
+  padding-left: 24px;
+  margin: 0;
+}
+
+.book16-toc li, .book16-back-cover li {
+  margin-bottom: 4px;
+  font-size: 1em;
+}
+
+.book16-insight-section, .book16-mood-section {
+  background: #fff7f2;
+  border: 2px dashed #f26b3a;
+  margin: 32px auto 0 auto;
+  max-width: 500px;
+  padding: 20px 10px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.book16-insight-section button {
+  margin-top: 12px;
+}
+
+.book16-mood-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #f7b267 0%, #f4845f 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 0;
+  font-size: 1.05em;
+  transition: background 0.2s, transform 0.13s;
+}
+
+.book16-mood-btn:hover {
+  background: linear-gradient(90deg, #f26b3a 0%, #f4845f 100%);
+  transform: scale(1.04);
+}
+
+.book16-mood-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book16-footer {
+  text-align: center;
+  color: #f26b3a;
+  margin: 36px 0 18px 0;
+  font-size: 0.98em;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 700px) {
+  .book16-main, .book16-insight-section, .book16-mood-section {
+    max-width: 98vw;
+    padding: 10px 3vw;
+  }
+  .book16-cover-image {
+    width: 90px;
+  }
+}

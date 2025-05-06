@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 1.2em;
+  color: #666;
+  margin: 10px 0;
+}
+
+.cover-image {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #2c3e50;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.cover-image:hover {
+  transform: scale(1.02);
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-book, .toc {
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.blurb {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+}
+
+.toggle-btn {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #34495e;
+}
+
+#toc-content {
+  margin-top: 20px;
+}
+
+#toc-content ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+#toc-content li {
+  margin-bottom: 15px;
+  color: #444;
+  position: relative;
+  padding-left: 20px;
+}
+
+#toc-content li:before {
+  content: "•";
+  color: #2c3e50;
+  position: absolute;
+  left: 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  .cover-image {
+    max-width: 250px;
+  }
+  
+  .about-book, .toc {
+    padding: 15px;
+  }
+} 
