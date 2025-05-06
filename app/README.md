@@ -155,6 +155,167 @@ This will create a production-ready build in the `build` directory. You can serv
 npx serve -s build
 ```
 
+## Deploying on AWS EC2
+
+To deploy this application on an AWS EC2 instance, follow these steps:
+
+### 1. Set Up an EC2 Instance
+
+1. **Launch an EC2 instance**
+   - Log in to your AWS Management Console
+   - Navigate to EC2 Dashboard
+   - Click "Launch Instance"
+   - Choose Amazon Linux 2 or Ubuntu Server (recommended)
+   - Select t2.micro (free tier eligible) or larger as needed
+   - Configure security groups to allow HTTP (port 80), HTTPS (port 443), and SSH (port 22)
+   - Create or select an existing key pair for SSH access
+   - Launch the instance
+
+2. **Connect to your instance**
+   ```bash
+   ssh -i /path/to/your-key.pem ec2-user@your-instance-public-dns
+   ```
+   (Use `ubuntu` instead of `ec2-user` if you selected Ubuntu Server)
+
+### 2. Install Dependencies
+
+```bash
+# Update the system
+sudo yum update -y  # For Amazon Linux
+# OR
+sudo apt update && sudo apt upgrade -y  # For Ubuntu
+
+# Install Node.js and npm
+curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -  # For Amazon Linux
+sudo yum install -y nodejs  # For Amazon Linux
+# OR
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -  # For Ubuntu
+sudo apt-get install -y nodejs  # For Ubuntu
+
+# Install Git
+sudo yum install git -y  # For Amazon Linux
+# OR
+sudo apt install git -y  # For Ubuntu
+
+# Install Nginx
+sudo amazon-linux-extras install nginx1 -y  # For Amazon Linux
+# OR
+sudo apt install nginx -y  # For Ubuntu
+
+# Start and enable Nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+```
+
+### 3. Deploy the Application
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/whose-book-game.git
+   cd whose-book-game/app
+   ```
+
+2. **Install dependencies and build**
+   ```bash
+   npm install
+   npm run build
+   ```
+
+3. **Configure Nginx**
+   Create an Nginx configuration file:
+   ```bash
+   sudo nano /etc/nginx/conf.d/whosebook.conf
+   ```
+
+   Add the following configuration:
+   ```nginx
+   server {
+       listen 80;
+       server_name your-domain.com www.your-domain.com;  # Replace with your domain or public IP
+
+       root /home/ec2-user/whose-book-game/app/build;  # Adjust path as needed
+       index index.html;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+       }
+
+       # Cache static assets
+       location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+           expires 1y;
+           add_header Cache-Control "public, max-age=31536000";
+       }
+   }
+   ```
+
+4. **Verify and restart Nginx**
+   ```bash
+   sudo nginx -t
+   sudo systemctl restart nginx
+   ```
+
+### 4. Set Up HTTPS (Optional but Recommended)
+
+1. **Install Certbot**
+   ```bash
+   # For Amazon Linux
+   sudo amazon-linux-extras install epel -y
+   sudo yum install certbot python-certbot-nginx -y
+   
+   # For Ubuntu
+   sudo apt install certbot python3-certbot-nginx -y
+   ```
+
+2. **Obtain and configure SSL certificate**
+   ```bash
+   sudo certbot --nginx -d your-domain.com -d www.your-domain.com
+   ```
+
+3. **Set up auto-renewal**
+   ```bash
+   sudo certbot renew --dry-run
+   ```
+
+### 5. Continuous Deployment (Optional)
+
+For automatic deployment when you push changes:
+
+1. **Create a deployment script**
+   ```bash
+   nano ~/deploy.sh
+   ```
+
+   Add the following content:
+   ```bash
+   #!/bin/bash
+   cd ~/whose-book-game
+   git pull
+   cd app
+   npm install
+   npm run build
+   ```
+
+   Make it executable:
+   ```bash
+   chmod +x ~/deploy.sh
+   ```
+
+2. **Set up a GitHub webhook or use AWS CodeDeploy for more advanced CI/CD workflows**
+
+### 6. Updating the Application
+
+To update the application with new changes:
+
+```bash
+cd ~/whose-book-game
+git pull
+cd app
+npm install
+npm run build
+```
+
+Your application should now be accessible via your EC2 instance's public IP address or your domain name if you've configured DNS to point to your instance.
+
 ## Project Organization
 
 This repository contains several key directories:
